@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="-1"/>
+
+		<title>jQuery Eggy - A Easter Egg Plugin</title>
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.eggy.js"></script>
+
+		<style type="text/css">
+			body {
+				font: 10px verdana;
+			}
+
+			a#coffee-link, div#coffee-container {
+				border-radius: 4px;
+				-khtml-border-radius: 4px;
+				-moz-border-radius: 4px;
+				-opera-border-radius: 4px;
+				-webkit-border-radius: 4px;
+			}
+
+			div#link a {
+				color: #EA9C00;
+				font: bold 10px verdana;
+				letter-spacing: .9px;
+				text-decoration: none;
+			}
+			
+			div#link a:hover {
+				color: #DC5;
+				font-weight: bold;
+				letter-spacing: .9px;
+				text-decoration: underline;
+			}
+
+			a#coffee-link {
+				background: url('img/coffee.png') 6px 2px no-repeat;
+				border: 1px solid #D9C640;
+				color: #FFF;
+				display: block;
+				font-weight: bold;
+				letter-spacing: .9px;
+				padding: 4px 5px 4px 26px;
+				text-decoration: none;
+			}
+
+			a#coffee-link:hover {
+				text-decoration: underline;
+			}
+
+			div#coffee-container {
+				background-color: #DC5;
+				float: right;
+				margin-right: 15px;
+			}
+
+			div.description {
+				color: #555;
+				letter-spacing: .1px;
+				margin-bottom: 10px;
+				text-indent: 7px;
+				text-align: left;
+				width: 99%;
+			}
+
+			div#link {
+				color: #AB9927;
+				text-indent: 7px;
+			}
+
+			div.notice {
+				font: 9px verdana;
+				color: #777;
+				letter-spacing: .1px;
+				margin-bottom: 3px;
+				text-indent: 7px;
+				text-align: left;
+				width: 99%;
+			}
+
+			div.session {
+				font: bold 13px verdana;
+				border-bottom: 1px solid #EFEFEF;
+				color: #444;
+				letter-spacing: .7px;
+				margin-bottom: 10px;
+				margin-top: 24px;
+				text-align: left;
+				width: 99%;
+			}
+
+			div.source {
+				background: #F8F8FF;
+				border: 1px solid #EFEFEF;
+				border-left: 3px solid #CCC;
+				color: #444;
+				font: 12px monospace;
+				letter-spacing: .1px;
+				margin-bottom: 7px;
+				margin-top: 5px;
+				padding: 7px;
+				width: 99%;
+			}
+
+			div.text {
+				color: #555;
+				letter-spacing: .1px;
+				margin-bottom: 20px;
+				margin-top: 5px;
+				text-align: left;
+				text-indent: 7px;
+				width: 99%;
+			}
+
+			div.title {
+				font: bold 17px verdana;
+				color: #269;
+				letter-spacing: .7px;
+				margin-bottom: 20px;
+				margin-top: 5px;
+				text-align: left;
+				width: 99%;
+			}
+			
+			span.comment-html, span.comment-script {
+				font: 12px monospace;
+				letter-spacing: .1px;
+				margin-bottom: 7px;
+				margin-top: 5px;
+			}
+
+			span.comment-html {
+				color: #5e85de;
+			}
+
+			span.comment-script {
+				color: #578F73;
+			}
+
+			span#version {
+				color: #777;
+				font: 10px verdana;
+			}
+		</style>
+
+		<script type="text/javascript">
+			// This code does NOT belong the plugin. See the example code at the bottom of this page.
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-19499234-7']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<div class="title">jQuery Eggy - A Easter Egg Plugin <span id="version">(current version: 0.1.0)</span></div>
+
+		<div id="link">
+			| <a href="http://github.com/downloads/wbotelhos/eggy/jquery.eggy-0.0.1.zip" target="_blank">Download</a> |
+			<a href="http://github.com/wbotelhos/eggy" target="_blank">Github</a> |
+			<a href="http://wbotelhos.com/eggy/changelog.txt" target="_blank">Change Log</a> |
+			<a href="http://wbotelhos.com/eggy/README.txt" target="_blank">Readme</a> |
+			<a href="http://wbotelhos.com/eggy/LICENSE.txt" target="_blank">Licence</a> |
+		</div>
+
+		<div id="coffee-container">
+			<a id="coffee-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=X8HEP2878NDEG&amp;item_name=jQuery%20Eggy" target="_blank">buy me a coffee</a>
+		</div><br/>
+
+		<div class="text">jQuery <strong>Eggy</strong> is a plugin that generates a customizable Easter Egg fired from a character set.</div>
+
+		<div id="default-demo" class="session">With default options:</div>
+		<div id="eggy"></div>
+
+		<div class="source">
+			$('#eggy').eggy({<br/>
+			&nbsp;&nbsp;code: ['y', 'e', 'a', 'h', '!']<br/>
+			});<br/><br/>
+
+			&lt;div id="eggy"&gt;&lt;/div&gt;
+		</div>
+
+		<div class="session">Default options:</div>
+
+		<div class="source">
+			code:&nbsp;&nbsp;&nbsp;&nbsp;[]<br/>
+		 	<div class="notice">Character set that fired the animation.</div>
+
+			height:&nbsp;&nbsp;160<br/>
+		 	<div class="notice">Height of the element that will be triggered.</div>
+
+			image:&nbsp;&nbsp;&nbsp;'img/eggy.png'<br/>
+		 	<div class="notice">Background image of the element.</div>
+
+			pause:&nbsp;&nbsp;&nbsp;480<br/>
+		 	<div class="notice">Time that the element is visible on the screen.</div>
+
+			side:&nbsp;&nbsp;&nbsp;&nbsp;'right'<br/>
+		 	<div class="notice">Side of the screen in which the element will be presented. ('left' or 'right')</div>
+
+			sound:&nbsp;&nbsp;&nbsp;'sound/eggy.wav'<br/>
+		 	<div class="notice">Sound to be played when the element appears.</div>
+
+			speed:&nbsp;&nbsp;&nbsp;200<br/>
+		 	<div class="notice">Speed of appearance of the element.</div>
+
+			width:&nbsp;&nbsp;&nbsp;160<br/>
+		 	<div class="notice">Width of the element that will be triggered.</div>
+		</div>
+
+		<script type="text/javascript">
+			$(function() {
+	
+				$('#eggy').eggy({
+					code:		['y', 'e', 'a', 'h', '!'],
+					height:		153,
+					width:		157
+				});
+	
+			});
+		</script>
+	</body>
+</html>

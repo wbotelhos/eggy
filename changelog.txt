@@ -1,0 +1,33 @@
+* code:      []                  // Character set that fired the animation.
+ * height:    180                 // Height of the element that will be triggered.
+ * image:     'img/eggy.png'      // Background image of the element.
+ * pause:     480                 // Time that the element is visible on the screen.
+ * side:      'right'             // Side of the screen in which the element will be presented.
+ * sound:     'sound/eggy.wav'    // Sound to be played when the element appears.
+ * speed:     200                 // Speed of appearance of the element.
+ * width:     180                 // Width of the element that will be triggered.
+ *
+ * Usage with default values:
+ * ---------------------------------------------------------------------------------
+ *
+ * $('#eggy').eggy({
+ *   code: ['y', 'e', 'a', 'h', '!']
+ * });
+ *
+ * <div id="eggy"></div>
+ 
+/**
+ * jQuery Eggy - A Easter Eggy Plugin - http://wbotelhos.com/eggy
+ * --------------------------------------------------------------------------
+ *
+ * 0.1.0
+ *   - Fired from a typed character set;
+ *   - Support choose the height of the element that will be triggered;
+ *   - Support choose the background image of the element;
+ *   - Support choose the time that the element is visible on the screen;
+ *   - Support choose the side of the screen in which the element will be presented ('left' or 'right');
+ *   - Support choose the sound to be played when the element appears;
+ *   - Support choose the speed of appearance of the element;
+ *   - Support choose the width of the element that will be triggered.
+ *
+ */
